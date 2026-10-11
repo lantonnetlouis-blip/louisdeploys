@@ -35,12 +35,14 @@ layout: default
         </span>
         <span class="home-icon-label">Instagram</span>
       </a>
-      <a class="home-icon" href="{% if site.reseaux.youtube %}{{ site.reseaux.youtube }}{% else %}#{% endif %}" target="_blank" rel="noopener">
+      {% if site.reseaux.youtube %}
+      <a class="home-icon" href="{{ site.reseaux.youtube }}" target="_blank" rel="noopener">
         <span class="home-icon-tile" style="background:var(--blue-luna)">
           <svg width="28" height="28" viewBox="0 0 14 14" shape-rendering="crispEdges" aria-hidden="true"><rect x="4" y="3" width="2" height="8" fill="var(--surface-paper)"/><rect x="6" y="4" width="2" height="6" fill="var(--surface-paper)"/><rect x="8" y="5" width="2" height="4" fill="var(--surface-paper)"/><rect x="10" y="6" width="1" height="2" fill="var(--surface-paper)"/></svg>
         </span>
         <span class="home-icon-label">YouTube</span>
       </a>
+      {% endif %}
     </nav>
   </main>
 
