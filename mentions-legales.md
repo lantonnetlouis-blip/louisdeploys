@@ -8,13 +8,11 @@ noindex: true
 
 ## Éditeur du site
 
-[À COMPLÉTER : ton nom, ou le nom et le statut de ta société]
+Louis, alias Louis Deploys
 
-[À COMPLÉTER : adresse, ou SIRET si tu as une entreprise]
+Contact : [contact.hory@icloud.com](mailto:contact.hory@icloud.com)
 
-Contact : [À COMPLÉTER : ton adresse email de contact]
-
-Directeur de la publication : [À COMPLÉTER : ton nom]
+Directeur de la publication : Louis
 
 ## Hébergement
 
