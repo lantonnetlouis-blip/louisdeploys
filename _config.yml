@@ -12,7 +12,7 @@ url: ""
 # Laisse vide avec un domaine perso ou un dépôt nommé <ton-pseudo>.github.io.
 # Si le site est publié sur https://<ton-pseudo>.github.io/<nom-du-depot>/,
 # mets ici "/<nom-du-depot>".
-baseurl: ""
+baseurl: "/louisdeploys"
 
 # Tes réseaux : colle l'adresse complète de chaque profil.
 reseaux:
