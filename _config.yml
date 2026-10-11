@@ -1,0 +1,43 @@
+# ============================================================
+#  Louis Deploys — réglages du site
+# ============================================================
+
+title: Louis Deploys
+description: Les ressources de mes vidéos sur l'IA, le code et le business. Gratuites, en un clic.
+lang: fr
+
+# Adresse du site. À remplir quand le domaine est choisi, par exemple :
+# url: https://louisdeploys.xyz
+url: ""
+# Laisse vide avec un domaine perso ou un dépôt nommé <ton-pseudo>.github.io.
+# Si le site est publié sur https://<ton-pseudo>.github.io/<nom-du-depot>/,
+# mets ici "/<nom-du-depot>".
+baseurl: ""
+
+# Tes réseaux : colle l'adresse complète de chaque profil.
+reseaux:
+  tiktok:      # ex. https://www.tiktok.com/@ton-compte
+  instagram:   # ex. https://www.instagram.com/ton-compte
+  youtube:     # ex. https://www.youtube.com/@ton-compte
+
+# Une ressource = un fichier dans le dossier _ressources.
+# Le nom du fichier devient l'adresse : _ressources/prompt.md -> /prompt/
+collections:
+  ressources:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: ressources
+    values:
+      layout: ressource
+      sticker: 100 % gratuit
+      densite: dense
+
+markdown: kramdown
+
+exclude:
+  - README.md
+  - LICENSE

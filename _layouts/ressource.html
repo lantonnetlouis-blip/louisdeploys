@@ -1,0 +1,79 @@
+---
+layout: default
+---
+<div class="ld-marquee" aria-label="Ressource gratuite de Louis Deploys">
+  <div class="ld-marquee-track" aria-hidden="true">
+    <span><b>★</b> Ressource gratuite</span><span><b>★</b> Commente, je t'envoie</span><span><b>★</b> IA · Code · Business</span><span><b>★</b> Louis Deploys</span>
+    <span><b>★</b> Ressource gratuite</span><span><b>★</b> Commente, je t'envoie</span><span><b>★</b> IA · Code · Business</span><span><b>★</b> Louis Deploys</span>
+  </div>
+</div>
+
+<main class="page page--{% if page.densite %}{{ page.densite }}{% else %}dense{% endif %}">
+  <div class="win-wrap">
+    {% if page.sticker %}<div class="ld-sticker-star ld-wobble" aria-hidden="true">{{ page.sticker }}</div>{% endif %}
+    <section class="ld-window" aria-labelledby="res-title">
+      <header class="ld-titlebar">
+        <svg class="ld-titlebar-icon" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="2" y="1" width="10" height="14" fill="var(--surface-paper)" stroke="var(--ink)"/>
+          <rect x="4" y="4" width="6" height="1" fill="var(--blue-luna)"/><rect x="4" y="7" width="6" height="1" fill="var(--blue-luna)"/><rect x="4" y="10" width="4" height="1" fill="var(--blue-luna)"/>
+        </svg>
+        <span class="ld-titlebar-title">{{ page.fichier }}</span>
+        <a class="ld-tbtn ld-tbtn--close" href="{{ '/' | relative_url }}" aria-label="Retour à l'accueil">×</a>
+      </header>
+
+      <div class="ld-window-body res-body">
+        <div>
+          <div class="res-badges">
+            {% if page.type %}<span class="ld-badge">{{ page.type }}</span>{% endif %}
+            {% for info in page.infos %}<span class="ld-badge ld-badge--sky">{{ info }}</span>{% endfor %}
+            {% if page.duree %}<span class="ld-badge ld-badge--sauge">{{ page.duree }}</span>{% endif %}
+          </div>
+          <h1 class="ld-wordart titre-ressource" id="res-title" data-type>{{ page.titre }}</h1>
+        </div>
+
+        {% if page.intro %}<p class="res-intro intro">{{ page.intro }}{% if page.tiktok %} <a class="ld-link" href="{{ page.tiktok }}" target="_blank" rel="noopener">Revoir la vidéo</a>{% endif %}</p>{% endif %}
+
+        {% if page.prompt %}
+        <pre class="ld-prompt" id="ressource-texte" tabindex="0" aria-label="Le prompt à copier">{{ page.prompt | strip | escape }}</pre>
+        <button class="ld-btn ld-btn--block" type="button" data-copy-target="ressource-texte">{% if page.bouton %}{{ page.bouton }}{% else %}Copier le prompt{% endif %}</button>
+        <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+        {% endif %}
+
+        {% if page.fichier_url %}
+        <a class="ld-btn ld-btn--block" href="{{ page.fichier_url | relative_url }}" download>{% if page.bouton %}{{ page.bouton }}{% else %}Télécharger{% endif %}</a>
+        {% endif %}
+
+        {% if page.video %}
+        <div class="res-video" data-reveal>
+          <video src="{{ page.video | relative_url }}" controls playsinline preload="metadata"></video>
+        </div>
+        {% endif %}
+
+        {% if page.etapes %}
+        <div data-reveal>
+          <h2 class="titre-section res-section-title">Comment l'utiliser</h2>
+          <ol class="ld-steps" style="margin-top:var(--space-16)">
+            {% for etape in page.etapes %}<li>{{ etape }}</li>
+            {% endfor %}
+          </ol>
+        </div>
+        {% endif %}
+
+        {% assign corps = content | strip %}
+        {% if corps != "" %}<div class="res-content" data-reveal>{{ content }}</div>{% endif %}
+
+        {% if page.astuce %}<div class="ld-tip" data-reveal><strong>Astuce</strong>{{ page.astuce }}</div>{% endif %}
+      </div>
+
+      <footer class="ld-statusbar"><span>1 fichier</span><span>Louis Deploys OS</span></footer>
+    </section>
+  </div>
+
+  <section class="follow" data-reveal>
+    <span class="ld-sticker-tape">Testé par Louis</span>
+    <p class="texte">Une nouvelle ressource à chaque vidéo.</p>
+    <a class="ld-gel" href="{% if site.reseaux.tiktok %}{{ site.reseaux.tiktok }}{% else %}{{ '/' | relative_url }}{% endif %}" target="_blank" rel="noopener">Suivre Louis Deploys</a>
+  </section>
+
+  <p class="site-foot texte-petit"><a href="{{ '/' | relative_url }}">Louis Deploys</a> · <a href="{{ '/mentions-legales/' | relative_url }}">Mentions légales</a></p>
+</main>

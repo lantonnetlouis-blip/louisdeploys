@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<div class="home ld-shake">
+  <main class="home-main">
+    <button class="ld-hero-name" id="ld-name" type="button" aria-label="Louis Deploys">
+      <span class="ld-wordart titre-hero home-name" data-type>Louis<br>Deploys</span>
+    </button>
+
+    <section class="ld-window" aria-label="Bienvenue">
+      <header class="ld-titlebar">
+        <svg class="ld-titlebar-icon" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="2" y="1" width="10" height="14" fill="var(--surface-paper)" stroke="var(--ink)"/>
+          <rect x="4" y="4" width="6" height="1" fill="var(--blue-luna)"/><rect x="4" y="7" width="6" height="1" fill="var(--blue-luna)"/><rect x="4" y="10" width="4" height="1" fill="var(--blue-luna)"/>
+        </svg>
+        <span class="ld-titlebar-title">BIENVENUE.TXT</span>
+        <button class="ld-tbtn ld-tbtn--close" type="button" aria-label="Fermer" data-wiggle>×</button>
+      </header>
+      <div class="ld-window-body">
+        <h1 class="home-bio intro">Les ressources de mes vidéos sur l'IA, le code et le business. Gratuites, en un clic.</h1>
+        <p class="home-hint texte-petit">Commente le mot-clé sous une vidéo : le lien arrive en DM.</p>
+      </div>
+    </section>
+
+    <nav class="home-icons" aria-label="Mes réseaux">
+      <a class="home-icon" href="{% if site.reseaux.tiktok %}{{ site.reseaux.tiktok }}{% else %}#{% endif %}" target="_blank" rel="noopener">
+        <span class="home-icon-tile" style="background:var(--ink)">
+          <svg width="28" height="28" viewBox="0 0 14 14" shape-rendering="crispEdges" aria-hidden="true"><rect x="7" y="1" width="2" height="9" fill="var(--sky)"/><rect x="9" y="1" width="3" height="2" fill="var(--sky)"/><rect x="3" y="8" width="5" height="4" fill="var(--sky)"/></svg>
+        </span>
+        <span class="home-icon-label">TikTok</span>
+      </a>
+      <a class="home-icon" href="{% if site.reseaux.instagram %}{{ site.reseaux.instagram }}{% else %}#{% endif %}" target="_blank" rel="noopener">
+        <span class="home-icon-tile" style="background:var(--orange)">
+          <svg width="28" height="28" viewBox="0 0 14 14" shape-rendering="crispEdges" aria-hidden="true"><rect x="1" y="3" width="12" height="9" fill="none" stroke="var(--ink)" stroke-width="2"/><rect x="5" y="5" width="4" height="4" fill="var(--ink)"/><rect x="9" y="1" width="3" height="2" fill="var(--ink)"/></svg>
+        </span>
+        <span class="home-icon-label">Instagram</span>
+      </a>
+      <a class="home-icon" href="{% if site.reseaux.youtube %}{{ site.reseaux.youtube }}{% else %}#{% endif %}" target="_blank" rel="noopener">
+        <span class="home-icon-tile" style="background:var(--blue-luna)">
+          <svg width="28" height="28" viewBox="0 0 14 14" shape-rendering="crispEdges" aria-hidden="true"><rect x="4" y="3" width="2" height="8" fill="var(--surface-paper)"/><rect x="6" y="4" width="2" height="6" fill="var(--surface-paper)"/><rect x="8" y="5" width="2" height="4" fill="var(--surface-paper)"/><rect x="10" y="6" width="1" height="2" fill="var(--surface-paper)"/></svg>
+        </span>
+        <span class="home-icon-label">YouTube</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="taskbar">
+    <span class="taskbar-start" aria-hidden="true">Démarrer</span>
+    <a href="{{ '/mentions-legales/' | relative_url }}">Mentions légales</a>
+    <span class="taskbar-clock" id="ld-clock" aria-hidden="true"></span>
+  </footer>
+</div>
+
+<div class="ld-storm" aria-hidden="true">
+  <div class="ld-storm-dark"></div>
+  <svg viewBox="0 0 390 760" preserveAspectRatio="none">
+    <path d="M300 -10 L215 230 L265 236 L150 470 L205 476 L70 780"/>
+    <path class="core" d="M300 -10 L215 230 L265 236 L150 470 L205 476 L70 780"/>
+    <path d="M215 230 L160 300 L175 330" style="stroke-width:3"/>
+  </svg>
+  <div class="ld-storm-flash"></div>
+</div>
