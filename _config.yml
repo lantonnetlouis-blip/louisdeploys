@@ -16,9 +16,9 @@ baseurl: "/louisdeploys"
 
 # Tes réseaux : colle l'adresse complète de chaque profil.
 reseaux:
-  tiktok:      # ex. https://www.tiktok.com/@ton-compte
-  instagram:   # ex. https://www.instagram.com/ton-compte
-  youtube:     # ex. https://www.youtube.com/@ton-compte
+  tiktok: https://www.tiktok.com/@louisdeploys
+  instagram: https://www.instagram.com/louisdeploys
+  youtube:     # vide = icône masquée. Ex. https://www.youtube.com/@ton-compte
 
 # Une ressource = un fichier dans le dossier _ressources.
 # Le nom du fichier devient l'adresse : _ressources/prompt.md -> /prompt/
@@ -40,4 +40,5 @@ markdown: kramdown
 
 exclude:
   - README.md
+  - GUIDE-RESSOURCES.md
   - LICENSE
